@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON with JQuery Ajax</title>
+</head>
+
+<body>
+    <h1>JSON with JQuery Ajax Demo</h1>
+</body>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/3.0.0-alpha1/jquery.js"></script>
+<script>
+
+    jQuery.ajax({
+        url: 'jsonfile.json',
+        datatype: 'json',
+        cache: false,
+        success: function(data, success){
+            console.log(data);
+            //console.log(data[0].name);
+            console.log(success);
+        },
+        error: function(xhr, textstatus,err){
+            console.log(xhr);
+            console.log(textstatus);
+    
+        }
+        
+        
+        
+        
+    });
+  
+    
+    
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Parse using eval() method for old browsers</title>
+</head>
+
+<body>
+   <H1>JSON Parse using eval() method Definition</H1>
+   <h3>Older browsers without the support for the JavaScript function JSON.parse() can use the eval() function to convert a JSON text into a JavaScript object</h3>
+   <p>	The eval() function can compile and execute any JavaScript.
+This represents a potential security problem. Try to avoid it.</p>
+ <ul>
+     <li>
+         It is safer to use a JSON parser to convert a JSON text to a JavaScript object.
+     </li>
+     <li>
+         A JSON parser will recognize only JSON text and will not compile scripts.
+     </li>
+     <li>
+         In browsers that provide native JSON support, JSON parsers are also faster.
+     </li>
+ </ul>
+   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+   
+   <p>view the results in your console.log</p>
+    
+</body>
+<script>
+    var jsonExample = 
+    '{' +
+       ' "name": "john doe", '+
+       ' "age": "unknown",' +
+       ' "address": "cant be found" }';
+       
+    
+    //from string to JSON object
+    
+    var jsonObj = eval ("(" + jsonExample + ")");
+    console.log(jsonObj);
+    
+
+    
+</script>
+</html>
