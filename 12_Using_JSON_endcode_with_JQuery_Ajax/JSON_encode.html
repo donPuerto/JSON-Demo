@@ -11,39 +11,28 @@
  
    <div class="jsonEncodeDemo"></div>
    
-
-
-   
 <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/2.1.4/jquery.js"></script>
 <script>
-
+  
     jQuery.ajax({
+        
         url: 'jsonPhpFile.php',
-        datatype: 'json',
-        cache: false,
+        dataType: 'json',
+        cache: true,
         success: function(data, success){
             $.each(data, function(key, val){
-                /*$(".jsonEncodeDemo").append(
-                    '<div>' + key +':'+ val + '</div>'
-                );*/
-                
-                console.log(data);
-                
-            });
+                $(".jsonEncodeDemo").append(
+                    '<div>' + key +'    :   '+ val + '</div>'
+                );    
+            });   
         },
         error: function(xhr, textstatus,err){
-            console.log(xhr);
+           
             console.log(textstatus);
     
         }
         
-        
-        
-        
     });
-  
-    
-    
 </script>
 </body>
 </html>
